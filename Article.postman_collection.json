@@ -1,0 +1,541 @@
+{
+	"info": {
+		"_postman_id": "c85b8b9d-2634-4631-8d91-8fa04f5528cc",
+		"name": "Article",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21587401"
+	},
+	"item": [
+		{
+			"name": "get all",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/article/1/5",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"article",
+						"1",
+						"5"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get all",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/article/1/5",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"article",
+								"1",
+								"5"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1964"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"7ac-e+7JN2h5QsKspTnev90xB+NCWvk\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 08 Feb 2025 12:12:55 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"Title\": \"Ambulo tum summopere vitium sum ventosus inventore adficio altus aestivus valeo deripio circumvenio suscipit curis cunctatio subseco patruus adaugeo studio.\",\n        \"Content\": \"Caecus teres tutis vito despecto adeptio illo usus speculum contego.\",\n        \"Category\": \"Olahraga\",\n        \"Created_date\": \"2025-02-08T12:10:39.720Z\",\n        \"Updated_date\": \"2025-02-08T12:10:39.720Z\",\n        \"Status\": \"Trash\"\n    },\n    {\n        \"id\": 2,\n        \"Title\": \"Tracto subiungo advoco demens viduo acer acceptus tubineus aggero quam neque apud crastinus varius temperantia asperiores aspernatur aspernatur magni amaritudo.\",\n        \"Content\": \"Utor blandior terra.\",\n        \"Category\": \"Teknologi\",\n        \"Created_date\": \"2025-02-08T12:10:39.720Z\",\n        \"Updated_date\": \"2025-02-08T12:10:39.720Z\",\n        \"Status\": \"Draft\"\n    },\n    {\n        \"id\": 3,\n        \"Title\": \"Ultra eaque curtus sumptus tempora dolor totam magni supra verbera dolores veritas advoco corrupti aetas auctor alter sortitus angulus ustilo.\",\n        \"Content\": \"Ocer capio thesaurus angelus fugit tres. Nostrum laudantium virga. Tribuo suscipio blandior sodalitas molestias.\",\n        \"Category\": \"Pendidikan\",\n        \"Created_date\": \"2025-02-08T12:10:39.725Z\",\n        \"Updated_date\": \"2025-02-08T12:10:39.725Z\",\n        \"Status\": \"Trash\"\n    },\n    {\n        \"id\": 4,\n        \"Title\": \"Necessitatibus strues anser deprecator vitium velociter damnatio allatus cur cometes adopto verbum claro virga tres ago armarium cura debeo totus.\",\n        \"Content\": \"Corona attollo altus. Quidem cuius sufficio ager. Valetudo delego accedo canonicus thymbra dapifer asporto.\",\n        \"Category\": \"Lifestyle\",\n        \"Created_date\": \"2025-02-08T12:10:39.725Z\",\n        \"Updated_date\": \"2025-02-08T12:10:39.725Z\",\n        \"Status\": \"Published\"\n    },\n    {\n        \"id\": 5,\n        \"Title\": \"Infit appello balbus vitae cohibeo vilitas ascit territo sapiente confugo delectus pax umbra circumvenio subito ter timor volo aggredior succedo.\",\n        \"Content\": \"Vomer vesica verto. Cibo sapiente sint. Vulariter sunt officiis creptio virtus tabula denuo similique tero aperte.\",\n        \"Category\": \"Lifestyle\",\n        \"Created_date\": \"2025-02-08T12:10:39.726Z\",\n        \"Updated_date\": \"2025-02-08T12:10:39.726Z\",\n        \"Status\": \"Published\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "get by id",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/article/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"article",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get by id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/article/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"article",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "379"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"17b-jiArfir31KBeruE+eKB9FeZMdng\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 08 Feb 2025 12:13:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"Title\": \"Ambulo tum summopere vitium sum ventosus inventore adficio altus aestivus valeo deripio circumvenio suscipit curis cunctatio subseco patruus adaugeo studio.\",\n    \"Content\": \"Caecus teres tutis vito despecto adeptio illo usus speculum contego.\",\n    \"Category\": \"Olahraga\",\n    \"Created_date\": \"2025-02-08T12:10:39.720Z\",\n    \"Updated_date\": \"2025-02-08T12:10:39.720Z\",\n    \"Status\": \"Trash\"\n}"
+				}
+			]
+		},
+		{
+			"name": "create article",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Real Madrid Pesta Gol\",\r\n    \"content\": \"Cristiano Ronaldo, sering disebut CR7, adalah salah satu pemain sepak bola terbaik yang pernah ada. Dengan berbagai prestasi gemilang, ia dikenal karena kemampuan mencetak gol yang luar biasa, kecepatan, dan keterampilan teknis yang tinggi. CR7 telah meraih berbagai penghargaan, termasuk Ballon d'Or, dan telah menjadi ikon global di dunia sepak bola. Kepindahannya ke berbagai klub besar seperti Manchester United, Real Madrid, Juventus, dan akhirnya kembali ke Manchester United, menunjukkan perjalanan karir yang luar biasa.\",\r\n    \"category\": \"Football\",\r\n    \"status\": \"published\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/article",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"article"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "failed 400",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Real\",\r\n    \"content\":\"CR 7\",\r\n    \"category\": \"Fo\",\r\n    \"status\": \"Published\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/article",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"article"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "191"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"bf-pBOtC7ot8PPQ5zelVwv3QN612dk\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 08 Feb 2025 12:11:21 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": [\n        \"Title must be at least 20 characters long\",\n        \"Content must be at least 200 characters long\",\n        \"Category must be at least 200 characters long\"\n    ],\n    \"error\": \"Bad Request\",\n    \"statusCode\": 400\n}"
+				},
+				{
+					"name": "sucess",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Real Madrid Pesta Gol\",\r\n    \"content\": \"Cristiano Ronaldo, sering disebut CR7, adalah salah satu pemain sepak bola terbaik yang pernah ada. Dengan berbagai prestasi gemilang, ia dikenal karena kemampuan mencetak gol yang luar biasa, kecepatan, dan keterampilan teknis yang tinggi. CR7 telah meraih berbagai penghargaan, termasuk Ballon d'Or, dan telah menjadi ikon global di dunia sepak bola. Kepindahannya ke berbagai klub besar seperti Manchester United, Real Madrid, Juventus, dan akhirnya kembali ke Manchester United, menunjukkan perjalanan karir yang luar biasa.\",\r\n    \"category\": \"Football\",\r\n    \"status\": \"Published\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/article",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"article"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2-vyGp6PvFo4RvsFtPoIWeCReyIC8\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 08 Feb 2025 12:12:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{}"
+				}
+			]
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/article/15",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"article",
+						"15"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/article/15",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"article",
+								"15"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 08 Feb 2025 11:07:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "put by id",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Real Madrid Pesta Gol\",\r\n    \"content\": \"Cristiano Ronaldo, sering disebut CR7, adalah salah satu pemain sepak bola terbaik yang pernah ada. Dengan berbagai prestasi gemilang, ia dikenal karena kemampuan mencetak gol yang luar biasa, kecepatan, dan keterampilan teknis yang tinggi. CR7 telah meraih berbagai penghargaan, termasuk Ballon d'Or, dan telah menjadi ikon global di dunia sepak bola. Kepindahannya ke berbagai klub besar seperti Manchester United, Real Madrid, Juventus, dan akhirnya kembali ke Manchester United, menunjukkan perjalanan karir yang luar biasa.\",\r\n    \"category\": \"Football\",\r\n    \"status\": \"Draft\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/article/16",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"article",
+						"16"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "failed 400",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Real\",\r\n    \"content\":\"CR 7\",\r\n    \"category\": \"Fo\",\r\n    \"status\": \"Published\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/article/16",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"article",
+								"16"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "191"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"bf-pBOtC7ot8PPQ5zelVwv3QN612dk\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 08 Feb 2025 12:15:22 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": [\n        \"Title must be at least 20 characters long\",\n        \"Content must be at least 200 characters long\",\n        \"Category must be at least 200 characters long\"\n    ],\n    \"error\": \"Bad Request\",\n    \"statusCode\": 400\n}"
+				},
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Real Madrid Pesta Gol\",\r\n    \"content\": \"Cristiano Ronaldo, sering disebut CR7, adalah salah satu pemain sepak bola terbaik yang pernah ada. Dengan berbagai prestasi gemilang, ia dikenal karena kemampuan mencetak gol yang luar biasa, kecepatan, dan keterampilan teknis yang tinggi. CR7 telah meraih berbagai penghargaan, termasuk Ballon d'Or, dan telah menjadi ikon global di dunia sepak bola. Kepindahannya ke berbagai klub besar seperti Manchester United, Real Madrid, Juventus, dan akhirnya kembali ke Manchester United, menunjukkan perjalanan karir yang luar biasa.\",\r\n    \"category\": \"Football\",\r\n    \"status\": \"draft\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/article/16",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"article",
+								"16"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2-vyGp6PvFo4RvsFtPoIWeCReyIC8\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 08 Feb 2025 12:16:33 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{}"
+				}
+			]
+		}
+	]
+}
