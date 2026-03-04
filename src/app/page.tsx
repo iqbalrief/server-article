@@ -3,17 +3,18 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { API_BASE_URL } from '@/config';
 
 type Post = {
   id: number;
   title: string;
   category: string;
-  status: string
+  status: string;
 };
 
 const AllPostsPage = () => {
   const [posts, setPosts] = useState<Post[]>([]);
-  const [activeTab, setActiveTab] = useState<'published' | 'draft' | 'trash'>('published'); // Lowercase active tab
+  const [activeTab, setActiveTab] = useState<'publish' | 'draft' | 'trash'>('publish');
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const router = useRouter();
@@ -21,17 +22,14 @@ const AllPostsPage = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/article/${page}/10`);
+        const response = await fetch(`${API_BASE_URL}/article`);
         const data = await response.json();
-        
-    
 
-        
         const formattedData = data.map((item: any) => ({
-          id: item.id,
+          id: item.ID,
           title: item.Title,
           category: item.Category,
-          status: item.Status.toLowerCase() as 'published' | 'draft' | 'trash',
+          status: item.Status.toLowerCase() as 'publish' | 'draft' | 'trash',
         }));
 
         setPosts(formattedData);
@@ -50,48 +48,33 @@ const AllPostsPage = () => {
 
   const handleTrash = async (id: number) => {
     try {
-     
-      const response = await fetch(`http://localhost:3000/article/${id}`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          status: 'trash',
-        }),
+      const response = await fetch(`${API_BASE_URL}/article/${id}`, {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
       });
 
-      if (!response.ok) {
-        throw new Error('Failed to update article status');
-      }
+      if (!response.ok) throw new Error('Failed to delete article');
 
-  
-      const { status } = await response.json();
-
-      setPosts((prevPosts) =>
-        prevPosts.map((post) =>
-          post.id === id ? { ...post, status } : post
-        )
-      );
+      setPosts((prev) => prev.filter((post) => post.id !== id));
     } catch (error) {
-      console.error('Error updating article:', error);
+      console.error('Error deleting article:', error);
     }
   };
 
   const filteredPosts = posts.filter((post) => post.status === activeTab);
 
   return (
-    <div className="p-4">
+    <div className="p-4 min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       <h1 className="text-2xl font-bold mb-4">All Posts</h1>
       <div className="flex justify-between items-center mb-4">
         <div className="flex space-x-4">
-          {['published', 'draft', 'trash'].map((tab) => (
+          {['publish', 'draft'].map((tab) => (
             <button
               key={tab}
-              className={`px-4 py-2 ${activeTab === tab ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
-              onClick={() => setActiveTab(tab as 'published' | 'draft' | 'trash')} 
+              className={`px-4 py-2 rounded ${activeTab === tab ? 'bg-blue-500 text-white' : 'bg-gray-200 dark:bg-gray-700 dark:text-gray-100'}`}
+              onClick={() => setActiveTab(tab as 'publish' | 'draft')}
             >
-              {tab.charAt(0).toUpperCase() + tab.slice(1)} 
+              {tab.charAt(0).toUpperCase() + tab.slice(1)}
             </button>
           ))}
         </div>
@@ -103,16 +86,16 @@ const AllPostsPage = () => {
       </div>
       <table className="w-full border-collapse">
         <thead>
-          <tr className="bg-gray-100">
-            <th className="p-2 border">Title</th>
-            <th className="p-2 border">Category</th>
-            <th className="p-2 border">Actions</th>
+          <tr className="bg-gray-100 dark:bg-gray-800">
+            <th className="p-2 border dark:border-gray-600">Title</th>
+            <th className="p-2 border dark:border-gray-600">Category</th>
+            <th className="p-2 border dark:border-gray-600">Actions</th>
           </tr>
         </thead>
         <tbody>
           {filteredPosts.length > 0 ? (
             filteredPosts.map((post) => (
-              <tr key={post.id} className="border">
+              <tr key={post.id} className="border dark:border-gray-600">
                 <td className="p-2">
                   <Link href={`/posts/${post.id}`}>
                     <span className="text-blue-500 hover:text-blue-700 cursor-pointer">
@@ -147,20 +130,17 @@ const AllPostsPage = () => {
         </tbody>
       </table>
 
-      {/* Pagination Controls */}
       <div className="flex justify-between items-center mt-4">
         <button
-          className="px-4 py-2 bg-gray-300 rounded disabled:opacity-50"
+          className="px-4 py-2 bg-gray-300 dark:bg-gray-700 dark:text-gray-100 rounded disabled:opacity-50"
           onClick={() => setPage((prev) => Math.max(prev - 1, 1))}
           disabled={page === 1}
         >
           Previous
         </button>
-        <span>
-          Page {page} of {totalPages}
-        </span>
+        <span>Page {page} of {totalPages}</span>
         <button
-          className="px-4 py-2 bg-gray-300 rounded disabled:opacity-50"
+          className="px-4 py-2 bg-gray-300 dark:bg-gray-700 dark:text-gray-100 rounded disabled:opacity-50"
           onClick={() => setPage((prev) => Math.min(prev + 1, totalPages))}
           disabled={page === totalPages}
         >

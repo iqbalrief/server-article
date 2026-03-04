@@ -1,10 +1,11 @@
 'use client';
 
+import { API_BASE_URL } from '@/config';
 import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 type Post = {
-  id: number;
+  ID: number;
   Title: string;
   Category: string;
   Content: string;
@@ -18,11 +19,13 @@ const PostDetailPage = () => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    console.log("params:", params);
+  console.log("id:", id);
     if (id) {
       const fetchPost = async () => {
         try {
           setLoading(true);
-          const response = await fetch(`http://localhost:3000/article/${id}`);
+          const response = await fetch(`${API_BASE_URL}/article/${id}`);
           if (!response.ok) {
             throw new Error('Post not found');
           }
